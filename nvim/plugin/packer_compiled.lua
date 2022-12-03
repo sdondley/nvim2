@@ -78,10 +78,33 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/steve/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["vim-tmux-navigator"] = {
+    cond = { true },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = true,
+    path = "/Users/steve/.local/share/nvim/site/pack/packer/opt/vim-tmux-navigator",
+    url = "https://github.com/christoomey/vim-tmux-navigator"
+  },
+  ["vim-tmuxify"] = {
+    cond = { true },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = true,
+    path = "/Users/steve/.local/share/nvim/site/pack/packer/opt/vim-tmuxify",
+    url = "https://github.com/jebaum/vim-tmuxify"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Conditional loads
+time([[Conditional loading of vim-tmuxify]], true)
+  require("packer.load")({"vim-tmuxify"}, {}, _G.packer_plugins)
+time([[Conditional loading of vim-tmuxify]], false)
+time([[Conditional loading of vim-tmux-navigator]], true)
+  require("packer.load")({"vim-tmux-navigator"}, {}, _G.packer_plugins)
+time([[Conditional loading of vim-tmux-navigator]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
