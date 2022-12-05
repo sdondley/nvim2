@@ -3,7 +3,7 @@ return require('packer').startup(function(use)
       { 'wbthomason/packer.nvim' },
       { 'christoomey/vim-tmux-navigator' },
       { 'jebaum/vim-tmuxify' },
-      { 'vimwiki/vimwiki', branch = 'dev', ft = 'vimwik',
+      { 'vimwiki/vimwiki', branch = 'dev',
       config = function()
           vim.g.vimwiki_toc_header = 'On This Page'
           vim.g.vimwiki_folding='custom'

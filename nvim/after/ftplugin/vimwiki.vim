@@ -39,6 +39,7 @@ endfunction
 set foldtext=MyFoldText()
 
 function! VimwikiFoldLevelCustom(lnum)
+    "let pounds = strlen(matchstr(getline(a:lnum), '^#\+[^[:space:]]'))
     let pounds = strlen(matchstr(getline(a:lnum), '^#\+'))
     if (pounds)
       return '>' . pounds  " start a fold level
