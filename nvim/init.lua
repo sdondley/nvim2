@@ -1,7 +1,8 @@
 vim.cmd[[
 let mapleader=';'
 syntax on
-filetype on
+filetype plugin on
+filetype indent on
 set nocompatible
 set mouse=a
 set clipboard=unnamedplus
