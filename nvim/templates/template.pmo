@@ -1,0 +1,23 @@
+#! /usr/bin/env perl
+package <MODULE NAME> ;
+
+use strict;
+use warnings;
+use Cwd;
+use subs '_print';
+BEGIN { use lib getcwd(); }
+use Log::Log4perl::Shortcuts qw(:all);
+
+my $is_script = not caller();
+main() if $is_script;
+
+sub main {
+	_print "Hello from main() of modulino.pl";
+}
+
+sub _print {
+  my $text = shift;
+  print "$text\n" if $is_script;
+}
+
+1;
