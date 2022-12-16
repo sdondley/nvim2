@@ -11,6 +11,7 @@ return require('packer').startup(function(use)
               --vim.g.vimwiki_global_ext = 0
               vim.g.vimwiki_folding='custom'
               vim.g.vimwiki_toc_header = 'On This Page'
+			  vim.g.vimwiki_list = {
                  {path = '~/vimwiki/', syntax = 'markdown', ext = '.md', name = 'nice'} }
 
           end
