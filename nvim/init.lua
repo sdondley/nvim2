@@ -417,6 +417,7 @@ noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
 
+autocmd TextChanged,TextChangedI <buffer> silent write
 
 " # Function to permanently delete views created by 'mkview'
 function! MyDeleteView()

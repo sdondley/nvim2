@@ -3,6 +3,7 @@ return require('packer').startup(function(use)
       { 'wbthomason/packer.nvim' },
       { 'christoomey/vim-tmux-navigator' },
       { 'jebaum/vim-tmuxify' },
+      { 'TheZoq2/neovim-auto-autoread' },
       { 'vim-syntastic/syntastic',	    opt = true, ft = {'php', 'perl'}},
       { 'c9s/perlomni.vim', 		    opt = true, ft = {"perl"} },
       { 'windwp/nvim-autopairs', 		    opt = true, ft = {'php', 'perl'}, config = function() require("nvim-autopairs").setup {} end },
