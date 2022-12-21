@@ -24,6 +24,7 @@ set timeoutlen=400
 ]]
 require('plugins')
 vim.cmd[[
+let g:python3_host_prog = '/usr/bin/python3'
 "source ~/.config/nvim/config/tmux.vim 
 
 
@@ -176,6 +177,22 @@ nmap <F11> :windo lcl\|ccl<CR>
 set conceallevel=2
 syntax match Text /^_desc.*/ conceal
 syntax match Text /^my @.*tas.*/ conceal
+
+"====[ Use persistent cursor ]=================
+
+augroup vimStartup
+    au!
+
+    " When editing a file, always jump to the last known cursor position.
+    " Don't do it when the position is invalid, when inside an event handler
+    " (happens when dropping a file on gvim) and for a commit message (it's
+    " likely a different one than last time).
+    autocmd BufReadPost *
+      \ if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'commit'
+      \ |   exe "normal! g`\""
+      \ | endif
+
+augroup END
 
 
 "====[ Use persistent undo ]=================
@@ -395,6 +412,7 @@ noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
 
+autocmd TextChanged,TextChangedI <buffer> silent write
 
 " # Function to permanently delete views created by 'mkview'
 function! MyDeleteView()
