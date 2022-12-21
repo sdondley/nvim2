@@ -72,11 +72,6 @@ set spellfile=~/git_repos/dotfiles2/nvim/spell/en.utf-8.add
 "autocmd BufWinEnter,WinEnter,  term://* startinsert
 
 
-" Uncomment the following to have Vim jump to the last position when
-" reopening a file
-"au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-
-
 "hi Folded ctermbg=black
 autocmd BufWritePre FileType perl  %s/\s\+$//e
 set spellfile=~/git_repos/dotfiles2/nvim/spell/en.utf-8.add
@@ -87,7 +82,7 @@ set spellfile=~/git_repos/dotfiles2/nvim/spell/en.utf-8.add
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
-"au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Uncomment the following to have Vim load indentation rules and plugins
 " according to the detected filetype.
