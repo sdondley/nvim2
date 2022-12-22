@@ -214,7 +214,7 @@ endfunction
 " uses user defined completion
 " taken from https://vi.stackexchange.com/questions/4584/how-to-create-my-own-autocomplete-function
 
-let s:matches=system("/bin/bash -c 'task _projects'")
+let s:matches=system("/bin/ash -c 'task _projects'")
 function! vimwiki#CompleteFA(findstart, base)
     if a:findstart
         " locate the start of the word
