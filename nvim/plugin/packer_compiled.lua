@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/steve/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/steve/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/steve/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/steve/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/steve/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/root/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/root/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/root/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/root/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/root/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -79,49 +79,54 @@ _G.packer_plugins = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/Users/steve/.local/share/nvim/site/pack/packer/opt/nvim-autopairs",
+    path = "/root/.local/share/nvim/site/pack/packer/opt/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/Users/steve/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "/root/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["perlomni.vim"] = {
     loaded = false,
     needs_bufread = true,
     only_cond = false,
-    path = "/Users/steve/.local/share/nvim/site/pack/packer/opt/perlomni.vim",
+    path = "/root/.local/share/nvim/site/pack/packer/opt/perlomni.vim",
     url = "https://github.com/c9s/perlomni.vim"
   },
   syntastic = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/Users/steve/.local/share/nvim/site/pack/packer/opt/syntastic",
+    path = "/root/.local/share/nvim/site/pack/packer/opt/syntastic",
     url = "https://github.com/vim-syntastic/syntastic"
   },
   taskwiki = {
     loaded = false,
     needs_bufread = true,
     only_cond = false,
-    path = "/Users/steve/.local/share/nvim/site/pack/packer/opt/taskwiki",
+    path = "/root/.local/share/nvim/site/pack/packer/opt/taskwiki",
     url = "https://github.com/tools-life/taskwiki"
+  },
+  ["vim-multiuser"] = {
+    loaded = true,
+    path = "/root/.local/share/nvim/site/pack/packer/start/vim-multiuser",
+    url = "https://github.com/emgram769/vim-multiuser"
   },
   ["vim-tmux-navigator"] = {
     loaded = true,
-    path = "/Users/steve/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
+    path = "/root/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
     url = "https://github.com/christoomey/vim-tmux-navigator"
   },
   ["vim-tmuxify"] = {
     loaded = true,
-    path = "/Users/steve/.local/share/nvim/site/pack/packer/start/vim-tmuxify",
+    path = "/root/.local/share/nvim/site/pack/packer/start/vim-tmuxify",
     url = "https://github.com/jebaum/vim-tmuxify"
   },
   vimwiki = {
-    config = { "\27LJ\2\nÍ\a\0\0\3\0\r\0\0256\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0'\1\5\0=\1\4\0006\0\0\0009\0\1\0004\1\a\0005\2\a\0>\2\1\0015\2\b\0>\2\2\0015\2\t\0>\2\3\0015\2\n\0>\2\4\0015\2\v\0>\2\5\0015\2\f\0>\2\6\1=\1\6\0K\0\1\0\1\0\4\tpath\15~/vimwiki/\bext\b.md\vsyntax\rmarkdown\tname\tnice\1\0\5\bext\b.md\tname\14tasknotes\tpath ~/Documents/notes/tasknotes\vsyntax\rmarkdown\rauto_toc\3\1\1\0\5\bext\b.md\tname\nnotes\tpath\23~/Documents/notes/\vsyntax\rmarkdown\rauto_toc\3\1\1\0\3\tpath%~/Documents/vimwiki/client_wikis\bext\b.md\vsyntax\rmarkdown\1\0\3\tpath\22~/vimwiki/steve/*\bext\b.md\vsyntax\rmarkdown\1\0\15\tname\ncccfr\bext\b.md\tpath.~/git_repos/websites/climate_change_chat/\21links_space_char\6-\15output_dir3~/git_repos/websites/climate_change_chat/html/#html_filename_parameterization\3\1\vsyntax\rmarkdown\rauto_toc\3\1\14path_html3~/git_repos/websites/climate_change_chat/html/\17template_ext\t.tpl\21template_default\fdefault\23vimwiki_toc_header\17On this Page\rcss_name\18css/style.css\18template_path8~/git_repos/websites/climate_change_chat/templates/\21custom_wiki2html\25~/bin/wiki2html.raku\17vimwiki_list\17On This Page\23vimwiki_toc_header\vcustom\20vimwiki_folding\6g\bvim\0" },
+    config = { "\27LJ\2\nÂ\1\0\0\3\0\b\0\0156\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0'\1\5\0=\1\4\0006\0\0\0009\0\1\0004\1\3\0005\2\a\0>\2\1\1=\1\6\0K\0\1\0\1\0\4\vsyntax\rmarkdown\tname\tnice\bext\b.md\tpath\15~/vimwiki/\17vimwiki_list\17On This Page\23vimwiki_toc_header\vcustom\20vimwiki_folding\6g\bvim\0" },
     loaded = true,
-    path = "/Users/steve/.local/share/nvim/site/pack/packer/start/vimwiki",
+    path = "/root/.local/share/nvim/site/pack/packer/start/vimwiki",
     url = "https://github.com/vimwiki/vimwiki"
   }
 }
@@ -129,15 +134,15 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: vimwiki
 time([[Config for vimwiki]], true)
-try_loadstring("\27LJ\2\nÍ\a\0\0\3\0\r\0\0256\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0'\1\5\0=\1\4\0006\0\0\0009\0\1\0004\1\a\0005\2\a\0>\2\1\0015\2\b\0>\2\2\0015\2\t\0>\2\3\0015\2\n\0>\2\4\0015\2\v\0>\2\5\0015\2\f\0>\2\6\1=\1\6\0K\0\1\0\1\0\4\tpath\15~/vimwiki/\bext\b.md\vsyntax\rmarkdown\tname\tnice\1\0\5\bext\b.md\tname\14tasknotes\tpath ~/Documents/notes/tasknotes\vsyntax\rmarkdown\rauto_toc\3\1\1\0\5\bext\b.md\tname\nnotes\tpath\23~/Documents/notes/\vsyntax\rmarkdown\rauto_toc\3\1\1\0\3\tpath%~/Documents/vimwiki/client_wikis\bext\b.md\vsyntax\rmarkdown\1\0\3\tpath\22~/vimwiki/steve/*\bext\b.md\vsyntax\rmarkdown\1\0\15\tname\ncccfr\bext\b.md\tpath.~/git_repos/websites/climate_change_chat/\21links_space_char\6-\15output_dir3~/git_repos/websites/climate_change_chat/html/#html_filename_parameterization\3\1\vsyntax\rmarkdown\rauto_toc\3\1\14path_html3~/git_repos/websites/climate_change_chat/html/\17template_ext\t.tpl\21template_default\fdefault\23vimwiki_toc_header\17On this Page\rcss_name\18css/style.css\18template_path8~/git_repos/websites/climate_change_chat/templates/\21custom_wiki2html\25~/bin/wiki2html.raku\17vimwiki_list\17On This Page\23vimwiki_toc_header\vcustom\20vimwiki_folding\6g\bvim\0", "config", "vimwiki")
+try_loadstring("\27LJ\2\nÂ\1\0\0\3\0\b\0\0156\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0'\1\5\0=\1\4\0006\0\0\0009\0\1\0004\1\3\0005\2\a\0>\2\1\1=\1\6\0K\0\1\0\1\0\4\vsyntax\rmarkdown\tname\tnice\bext\b.md\tpath\15~/vimwiki/\17vimwiki_list\17On This Page\23vimwiki_toc_header\vcustom\20vimwiki_folding\6g\bvim\0", "config", "vimwiki")
 time([[Config for vimwiki]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType php ++once lua require("packer.load")({'syntastic', 'nvim-autopairs'}, { ft = "php" }, _G.packer_plugins)]]
-vim.cmd [[au FileType perl ++once lua require("packer.load")({'perlomni.vim', 'syntastic', 'nvim-autopairs'}, { ft = "perl" }, _G.packer_plugins)]]
+vim.cmd [[au FileType php ++once lua require("packer.load")({'nvim-autopairs', 'syntastic'}, { ft = "php" }, _G.packer_plugins)]]
 vim.cmd [[au FileType vimwiki ++once lua require("packer.load")({'taskwiki'}, { ft = "vimwiki" }, _G.packer_plugins)]]
+vim.cmd [[au FileType perl ++once lua require("packer.load")({'nvim-autopairs', 'perlomni.vim', 'syntastic'}, { ft = "perl" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 
