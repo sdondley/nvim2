@@ -3,6 +3,9 @@ return require('packer').startup(function(use)
       { 'wbthomason/packer.nvim' },
       { 'christoomey/vim-tmux-navigator' },
       { 'jebaum/vim-tmuxify' },
+      { 'junegunn/fzf.vim', opt = true, cond = true, branch = 'master',
+    					    requires = {'junegunn/fzf', opt = true, cond = true, cmd = 'fzf#install()' } },
+
       { 'vim-syntastic/syntastic',	    opt = true, ft = {'php', 'perl'}},
       { 'c9s/perlomni.vim', 		    opt = true, ft = {"perl"} },
       { 'windwp/nvim-autopairs', 		    opt = true, ft = {'php', 'perl'}, config = function() require("nvim-autopairs").setup {} end },
