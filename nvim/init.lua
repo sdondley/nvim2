@@ -418,7 +418,7 @@ noremap <leader>9 9gt
 function! SetupInstantServer()
   exec 'InstantStartServer 172.18.0.2 8080'
   exec 'InstantOpenAll'
-  exec 'InstantStartSession 172.18.0.2. 8080'
+  exec 'InstantStartSession 172.18.0.2 8080'
 endfunction
 
 " # Function to permanently delete views created by 'mkview'
