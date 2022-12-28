@@ -21,6 +21,8 @@ set backupdir=~/.cache/nvim
 set ignorecase
 set smartcase
 set timeoutlen=400
+set noswapfile
+let g:instant_username=$PU
 ]]
 require('plugins')
 vim.cmd[[
@@ -412,20 +414,20 @@ noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
 
-set autoread
-augroup textchange
-    autocmd!
-    autocmd TextChanged,TextChangedI <buffer> silent write
-augroup END
+"set autoread
+"augroup textchange
+""    autocmd!
+"    autocmd TextChanged,TextChangedI <buffer> silent write
+"augroup END
 
-if ! exists("g:CheckUpdateStarted")
-    let g:CheckUpdateStarted=1
-    call timer_start(1,'CheckUpdate')
-endif
-function! CheckUpdate(timer)
-    silent! checktime
-    call timer_start(100,'CheckUpdate')
-endfunction
+"if ! exists("g:CheckUpdateStarted")
+"    let g:CheckUpdateStarted=1
+"    call timer_start(1,'CheckUpdate')
+"endif
+"function! CheckUpdate(timer)
+"    silent! checktime
+"    call timer_start(100,'CheckUpdate')
+"endfunction
 
 
 " # Function to permanently delete views created by 'mkview'

@@ -3,6 +3,7 @@ return require('packer').startup(function(use)
       { 'wbthomason/packer.nvim' },
       { 'christoomey/vim-tmux-navigator' },
       { 'jebaum/vim-tmuxify' },
+      { 'jbyuki/instant.nvim' },
       { 'junegunn/fzf.vim', opt = true, cond = true, branch = 'master',
     					    requires = {'junegunn/fzf', opt = true, cond = true, cmd = 'fzf#install()' } },
 
