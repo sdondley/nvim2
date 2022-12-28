@@ -415,7 +415,7 @@ noremap <leader>8 8gt
 noremap <leader>9 9gt
 
 
-function! setupInstantServer()
+function! SetupInstantServer()
   exec 'InstantStartServer 172.18.0.2 8080'
   exec 'InstantOpenAll'
   exec 'InstantStartSession 172.18.02. 8080'
