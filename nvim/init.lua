@@ -416,15 +416,15 @@ noremap <leader>9 9gt
 
 command Sis call SetupInstantServer()
 function! SetupInstantServer()
-  exec 'InstantStartServer server 8080'
+  exec 'InstantStartServer 172.18.0.20 8080'
   exec 'InstantOpenAll'
-  exec 'InstantStartSession server 8080'
+  exec 'InstantStartSession 172.18.0.20 8080'
   autocmd CursorHold,CursorHoldI <buffer> silent! exec InstantSaveAll
 endfunction
 
 command Js call JoinSession()
 function! JoinSession()
-  exec 'InstantJoinSession server 8080'
+  exec 'InstantJoinSession 172.18.0.20 8080'
 endfunction
 
 
