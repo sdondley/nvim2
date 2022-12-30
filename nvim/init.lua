@@ -157,7 +157,7 @@ vnoremap <silent> <C-r> :<C-u>call Comment()<cr><cr>
 "lua require('formatting')
 
 nnoremap <leader>so :so ~/.config/nvim/init.lua<cr>
-nnoremap <leader>sov :so ~/git_repos/dotfiles2/nvim/after/ftplugin/vimwiki.vim<cr>
+nnoremap <leader>sov :so ~/git_repos/nvim2/nvim/after/ftplugin/vimwiki.vim<cr>
 
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
