@@ -414,12 +414,19 @@ noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
 
-
+command Sis call SetupInstantServer()
 function! SetupInstantServer()
-  exec 'InstantStartServer 172.18.0.2 8080'
+  exec 'InstantStartServer server 8080'
   exec 'InstantOpenAll'
-  exec 'InstantStartSession 172.18.0.2 8080'
+  exec 'InstantStartSession server 8080'
+  autocmd CursorHold,CursorHoldI <buffer> silent! exec InstantSaveAll
 endfunction
+
+command Js call JoinSession()
+function! JoinSession()
+  exec 'InstantJoinSession server 8080'
+endfunction
+
 
 " # Function to permanently delete views created by 'mkview'
 function! MyDeleteView()
