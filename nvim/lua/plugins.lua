@@ -14,7 +14,7 @@ return require('packer').startup(function(use)
 
 		if
 			fn.getbufvar(buf, "&modifiable") == 1 and
-            not mode() == 'i' and
+            mode() != 'i' and
 			utils.not_in(fn.getbufvar(buf, "&filetype"), {}) then
 			return true -- met condition(s), can save
 		end
