@@ -23,6 +23,7 @@ set smartcase
 set timeoutlen=400
 set noswapfile
 let g:instant_username=$PU
+let g:instant_work_from_buffers=1
 ]]
 require('plugins')
 vim.cmd[[
