@@ -3,7 +3,7 @@ return require('packer').startup(function(use)
       { 'wbthomason/packer.nvim' },
       { 'christoomey/vim-tmux-navigator' },
       { 'jebaum/vim-tmuxify' },
-      { 'Pocco81/auto-save.nvim'
+      { 'Pocco81/auto-save.nvim',
           config = function() 
           trigger_events = {"InsertLeave", "TextChanged"}, -- vim events that trigger auto-save. See :h events
             -- function that determines whether to save the current buffer or not
