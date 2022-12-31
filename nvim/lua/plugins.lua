@@ -11,7 +11,7 @@ return require('packer').startup(function(use)
             -- return false: if it's not ok to be saved
             condition = function(buf)
                 if
-                    vim.api.nvim_get_mode().mode == 'i' then
+                    nvim_get_mode().mode == 'i' then
                     return false
                 end
                 local fn = vim.fn
