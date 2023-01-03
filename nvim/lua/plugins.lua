@@ -3,7 +3,6 @@ return require('packer').startup(function(use)
       { 'wbthomason/packer.nvim' },
       { 'christoomey/vim-tmux-navigator' },
       { 'jebaum/vim-tmuxify' },
-      { 'Pocco81/auto-save.nvim',
         {
           trigger_events = {"InsertLeave"}, -- vim events that trigger auto-save. See :h events
             -- function that determines whether to save the current buffer or not
@@ -27,7 +26,7 @@ return require('packer').startup(function(use)
             end,
         }
       },
-      { 'sdondley/instant.nvim' },
+      { 'sdondley/instant.nvim' branch='sdondley' },
       { 'junegunn/fzf.vim', opt = true, cond = true, branch = 'master',
     					    requires = {'junegunn/fzf', opt = true, cond = true, cmd = 'fzf#install()' } },
 
