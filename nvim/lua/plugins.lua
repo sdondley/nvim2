@@ -3,30 +3,7 @@ return require('packer').startup(function(use)
       { 'wbthomason/packer.nvim' },
       { 'christoomey/vim-tmux-navigator' },
       { 'jebaum/vim-tmuxify' },
-        {
-          trigger_events = {"InsertLeave"}, -- vim events that trigger auto-save. See :h events
-            -- function that determines whether to save the current buffer or not
-            -- return true: if buffer is ok to be saved
-            -- return false: if it's not ok to be saved
-            condition = function(buf)
-                if
-                    nvim_get_mode().mode == 'i' then
-                    return false
-                end
-                local fn = vim.fn
-                local utils = require("auto-save.utils.data")
-
-
-                if
-                    fn.getbufvar(buf, "&modifiable") == 1 and
-                    utils.not_in(fn.getbufvar(buf, "&filetype"), {}) then
-                    return true -- met condition(s), can save
-                end
-                return false -- can't save
-            end,
-        }
-      },
-      { 'sdondley/instant.nvim' branch='sdondley' },
+      { 'sdondley/instant.nvim', branch = 'sdondley' },
       { 'junegunn/fzf.vim', opt = true, cond = true, branch = 'master',
     					    requires = {'junegunn/fzf', opt = true, cond = true, cmd = 'fzf#install()' } },
 
