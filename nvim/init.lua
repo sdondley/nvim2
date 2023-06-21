@@ -25,6 +25,10 @@ set timeoutlen=400
 require('plugins')
 vim.cmd[[
 "source ~/.config/nvim/config/tmux.vim 
+" Configure vim-slime
+let g:slime_target = "tmux"
+let g:slime_python_executable = "python3"
+let g:slime_custom_config = {"chatgpt": {"filetype": "python", "executable": "python3", "args": "/Users/steve/Desktop/chatgpt_vim.py"}}
 
 
 nnoremap <leader><leader> :w<cr>
@@ -64,18 +68,6 @@ endfunction
 filetype plugin on
 filetype plugin indent on
 
-"hi Folded ctermbg=black
-autocmd BufWritePre FileType perl  %s/\s\+$//e
-set spellfile=~/git_repos/dotfiles2/nvim/spell/en.utf-8.add
-
-" avoid annoying keypress when opening/closing terminal
-"autocmd BufWinEnter,WinEnter,  term://* startinsert
-
-
-" Uncomment the following to have Vim jump to the last position when
-" reopening a file
-"au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-
 
 "hi Folded ctermbg=black
 autocmd BufWritePre FileType perl  %s/\s\+$//e
@@ -87,7 +79,7 @@ set spellfile=~/git_repos/dotfiles2/nvim/spell/en.utf-8.add
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
-"au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Uncomment the following to have Vim load indentation rules and plugins
 " according to the detected filetype.

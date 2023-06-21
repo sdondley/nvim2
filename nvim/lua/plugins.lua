@@ -2,6 +2,20 @@ return require('packer').startup(function(use)
   use { 
       { 'wbthomason/packer.nvim' },
       { 'christoomey/vim-tmux-navigator' },
+      { 'github/copilot.vim' },
+      { "jackMort/ChatGPT.nvim",
+    config = function()
+      require("chatgpt").setup({
+        -- optional configuration
+      })
+    end,
+    requires = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim"
+    }
+},
+      { 'jpalardy/vim-slime' },
       { 'jebaum/vim-tmuxify' },
       { 'vim-syntastic/syntastic',	    opt = true, ft = {'php', 'perl'}},
       { 'c9s/perlomni.vim', 		    opt = true, ft = {"perl"} },
@@ -35,6 +49,30 @@ return require('packer').startup(function(use)
 		     {path = '~/vimwiki/', syntax = 'markdown', ext = '.md', name = 'nice'} }
 
       end
+
+      },
+
+      { 'Pocco81/auto-save.nvim',
+      {
+
+            trigger_events = {"InsertLeave", "TextChanged"},
+            condition = function(buf)
+                if
+                    mode() == 'i' then
+                    return false
+                end
+                local fn = vim.fn
+                local utils = require("auto-save.utils.data")
+
+
+                if
+                    fn.getbufvar(buf, "&modifiable") == 1 and
+                    utils.not_in(fn.getbufvar(buf, "&filetype"), {}) then
+                    return true -- met condition(s), can save
+                end
+                return false -- can't save
+            end,
+      }
 
       },
      { 'tools-life/taskwiki', opt = true, ft = 'vimwiki', branch = 'master' },
